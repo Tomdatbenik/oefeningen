@@ -1,0 +1,92 @@
+<html lang="nl">
+
+<head>
+    <!--titel dat bovenin de webrowser tab komt te staan.-->
+    <title>oefening</title>
+
+
+    <!--De style hrefs:-->
+    <link href="style/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="style/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="style/bootstrap/css/owntheme.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--javscript-->
+    <script src="javascript/opdrachten.js"></script>
+    <div id="Main" class="Main">
+        <!--Bootstrap:-->
+        <div class="thumbnail">
+            <div class="caption">
+                <h1> hier zijn we dan via javascript</h1>
+            </div>
+
+
+            <!--Sommige delen van de uitleg staat in <p> om ook duidelijkheid te geven bij de voorbeelden als je het uitvoerd in de webrowser.-->
+
+            <div>
+                <h2>Uitleg:</h2>
+                <p>
+                    Met javascript kan je html elementen bijwerken terwijl de pagina al geladen is. Hieronder maken we een 3 buttons aan met
+                    het id's en value's: green , red, blue. deze buttons zullen naar de kleur veranderen van hun id. Dit
+                    wordt gedaan met een algemene functie die hun value uit de butten haald doormiddel van onclick="".
+                </p>
+                <h3>De 3 buttons:</h3>
+                <!--3 buttons met die naar de kleur veranden met het ID-->
+                <button id="green" onclick="changecoloronId('green');">green</button>
+                <button id="red" onclick="changecoloronId('red');">red</button>
+                <button name="blue" onclick="changecolorOnColor('blue');">blue</button>
+                <!--Script staat in oefenjavascript.js.-->
+
+
+
+                <div class="thumbnail">
+                    <div class="caption">
+                        <p>w3schools is ooit wel handig ;) hier zijn 2 links als hulp. scheelt weer wat googlen.</p>
+                        <a target="_blank" href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">innerhtml hulp</a><br/>
+                        <a target="_blank" href="https://www.w3schools.com/jsref/dom_obj_style.asp">style hulp</a><br/>
+                        <a target="_blank" href="https://www.w3schools.com/js/js_popup.asp">alerts</a><br/>
+                        <!--
+                        href zal ik niet uitleggen maar target="" is waar je de href wil laten gebeuren hier wordt door target="_blank" een nieuwe
+                        tab geopend met de link
+                        -->
+                    </div>
+                </div>
+
+                <h1> opdrachten maken in javscript/javascriptopdrachten.js</h1>
+
+                <h2> OPDRACHT 1 </h2>
+                <p>Hieronder staat de text "Opdracht 1!!". Maak deze rood als je op de knop drukt opdracht 1 drukt. maak gebruik
+                    van opdrachten.js . tips: style</p>
+                <p id="opdracht1">Opdracht 1!!</p>
+
+                <button onclick="opdrachtkleur();">opdracht1</button>
+
+                <h2> OPDRACHT 2 </h2>
+                <p>Hieronder staat de text "Heyyyy!!". Verander deze text in "I did it" . maak gebruik van opdrachten.js . tips:
+                    innerhtml
+                </p>
+                <p id="text1">Heyyyy!!</p>
+
+                <button onclick="opdrachttxt();">opdracht2</button>
+
+                <h2> OPDRACHT 3 </h2>
+                <p>
+                    Zorg ervoor dat er een alert box komt zodra je op deze knop drukt hieronder. tekst in de alert box moet "How to become a
+                    javascript God??" worden.
+                </p>
+                <button onclick="opdrachtalert();">opdracht3</button>
+
+                <h2> OPDRACHT 4 </h2>
+                <p>
+                    Warning! Warning! Warning! deze wordt iets moeilijker!! Zorg ervoor dat er met een alert box het html element met het id="alertinput"
+                    de text wordt veranderd wordt door middel van een alert. Gebruik hiervoor de "prompt" functie.
+                </p>
+                <p id="alertinput"></p>
+                <button onclick="opdrachtalertprompt();">opdracht4</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

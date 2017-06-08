@@ -1,0 +1,159 @@
+<html lang="nl">
+
+<head>
+    <!--titel dat bovenin de webrowser tab komt te staan.-->
+    <title>oefening</title>
+
+
+    <!--De style hrefs:-->
+    <link href="style/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="style/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="style/bootstrap/css/owntheme.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <div id="Main" class="Main">
+
+        <!--De navigatie bar gebruik gemaakt van bootstrap-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <!--Navigatie header-->
+                <div class="navbar-header">
+                    <p id="oefeningheader" class="navbar-brand">Header van navigatie</p>
+                </div>
+
+                <ul class="nav nav-tabs nav-justified form-group-lg">
+
+                    <!--in tab1 zal alleen javascript gebruikt worden. zie oefenjavascript.js-->
+
+                    <!--in tab2 zal alleen jquery gebruikt worden. zie oefenjquery.js-->
+
+                    <!--zie eerst oefenjavascript.js voor jquery.js-->
+
+
+                    <!--Tab 1 wordt het event "onclick" in het html element voert de functie:"tab1_click()" uit in oefenjavascript.js zie oefenjavascript.js voor verdere uitleg.
+                                            de onclick voert de functie uit in oefenjavascript.js die tussen de "" staan.
+                                                                                        |
+                                                                                        |
+                                                                                        V     -->
+                    <li><button type="button" id="tab1" class="form-control" onclick="tab1_click();">tab1</button></li>
+
+                    <!--Tab 1 wordt het event ".click" (onclick) aangeroepen in de Jqeury in oefenjquery.js  verdere uitleg in oefenjquery.js-->
+                    <li><button type="button" id="tab2" class="form-control">tab2</button></li>
+                </ul>
+
+
+
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+
+    <!--De javascript-->
+    <!--Javascript kan je vergelijken met php. als je in een php bestand "echo "hello world";"zet zal het "hello world" schrijven naar de browser.
+    Maar als je in php een funtie schrijft zal deze eerst aangeroepen worden zie voorbeeld hieronder.
+
+    <?php
+        De functie wordt hier aangeroepen:
+
+        helloworld();
+
+
+        function helloworld()
+        {
+            echo "hello world";
+        }
+    ?>
+
+    javascript werkt het zelfde. de code wordt meteen uitgevoerd zodra de pagina is geladen.
+    zie voorbeeld hieronder:-->
+
+    <p id="voorbeeld"> Dit zal veranderd worden. DIT OOK <button>Deze knop wordt verwijderd bij het laden van de pagina</button>
+    </p>
+
+    <script>
+        helloworld();
+
+        function helloworld() {
+            /*
+            Dit is javascript geen jquery 
+
+
+
+            DIT HOEFT NOG NIET GESNAPT TE WORDEN
+
+            
+            Het verschil tussen javascript en jquery is dat je bij javascript een variable wilt veranderen 
+            denk aan een c# object bijvoorbeeld object Auto deze heeft een naam;
+            de naar wil ik veranderen dit zou in c# gedaan wordan als: "Auto.naam = "Nieuwenaam"
+            in javascript zal dit het zelfde zijn je veranderd een variable
+            MAAR 
+            in jquery heb je hier bijvoorbeeld een functie voor "changenaam"
+            in c# zou dit die functie er zo uitzien:
+
+            public function changenaam(string input)
+            {
+                Auto.naam = input;
+            }
+
+            Nu in javascript:
+
+            document.getElementById('voorbeeld').innerHtml = "helloworld";
+
+            Nu in jqeury
+
+            $("#voorbeeld").html("helloworld");
+
+
+            jQuery .html is een functie u er als voorbeeld ongeveer zo uitzien:
+
+            var element = $("voorbeeld");
+
+            element.html = (function(input)
+            {
+                element.innerhtml = input;
+            });
+
+
+
+
+            
+            het element dat veranderd moet worden MOET boven het script staan DIT GELD NIET ALS JE EEN SCRIPT src="ander bestand" GEBRUIKT!.
+            het element dat wordt aangeroepen ="<p id="voorbeeld"></p>".
+            inner html veranderd alles wat hier binnen in staat.
+            */
+            document.getElementById("voorbeeld").innerHTML = "hello world";
+            document.getElementById("voorbeeld2").innerHTML = "deze zal niet werken aangezien voorbeel2 later wordt geladen dat dit script dit zou wel werken als deze code in een ander js document zou staan.";
+        }
+    </script>
+
+    <!--Dit is leeg als je de pagina laat laden zie code hierbove (regel 89)-->
+    <p id="voorbeeld2"></p>
+
+    <!--in de div "inhoud" worden de pagina's' van tab1 en tab2 van de navigatie ingeladen (met javascript/jquery) ZIE: oefenjquery.js en oefenjavascript.js 
+    hierin staat de code waar genaivigeerd word-->
+    <div id="inhoud">
+
+    </div>
+
+
+    <!--De javascript bestanden:-->
+
+    <!--als je jqeury wilt gebruiken moet je jquery als eerste script inporteren in de website met de code:
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    -->
+
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="javascript/oefenjavascript.js"></script>
+    <script src="javascript/oefenjquery.js"></script>
+    <script src="javascript/javascriptopdrachten.js"></script>
+    <script src="javascript/jqueryopdrachten.js"></script>
+</body>
+
+</html>

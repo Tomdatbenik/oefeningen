@@ -1,0 +1,86 @@
+<html lang="nl">
+
+<head>
+    <!--titel dat bovenin de webrowser tab komt te staan.-->
+    <title>oefening</title>
+
+
+    <!--De style hrefs:-->
+    <link href="style/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="style/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="style/bootstrap/css/owntheme.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--javscript-->
+    <script src="javascript/jqueryopdrachten.js"></script>
+    <script src="javascript/oefenjquery.js"></script>
+
+    <!--Jquery-->
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+
+    <div id="Main" class="Main">
+
+        <!--Bootstrap:-->
+        <div class="thumbnail">
+            <div class="caption">
+                <h1> hier zijn we dan via jquery</h1>
+            </div>
+            <div>
+                <h2>Uitleg GetElementby:</h2>
+                <p>
+                    Met jquery kan je html elementen bijwerken terwijl de pagina al geladen is. Hieronder maken we een 3 buttons aan met de value's:
+                    green , red, blue. deze buttons zullen naar de kleur naar de kleur van hun value. Dit wordt gedaan met
+                    een algemene functie die hun value uit hun id haald door middel van .click event in jquery.
+                </p>
+                <h3>De 3 buttons:</h3>
+                <!--4 buttons met die naar de kleur veranden ZIE oefenjquery.js hier word stap voor stap uitgelegd hoe het werkt-->
+                <button id="knop1" value="green">green</button>
+                <button name="knopjekleur" value="red">red</button>
+                <button name="knopjekleur" value="purple">purple</button>
+                <button class="blue" value="blue">blue</button>
+                <!--Script staat in oefenjavascript.js.-->
+
+
+                <h2>Uitleg InnerHTML:</h2>
+                <p>
+                    Javascript VARIABLE ".InnerHTML" dit is een goed voorbeeld om het verschil te laten zien. De VARIABLE ".InnerHTML" HEEFT
+                    jquery ook. Dit is een functie genaamd ".html()". Deze knop hieronder zal de text erboven veranderen.
+                </p>
+                <p id="verandertext">DEZE TEXT VERANDERD</p>
+                <button id="changetext">verander de text</button>
+
+                <!--script zal hier staan voor duidelijkheid-->
+
+                <script>
+                    $(document).ready(function () {
+                        //roep de knop .click aan
+                        $("#changetext").click(function () {
+                            //In de html parameter kan je gegevens invoeren naar wens
+                            $("#verandertext").html("Poeff**");
+                        })
+                    });
+                </script>
+
+                <h1> opdrachten maken in javscript/jqueryopdrachten.js</h1>
+
+                <h2> OPDRACHT 1 </h2>
+                <p>Hieronder staat de text "Opdracht 1!!". Maak deze rood als je op de knop drukt opdracht 1 drukt. maak gebruik
+                    van jqueryopdrachten.js . tips: .css</p>
+                <p id="opdracht1text">Opdracht 1!!</p>
+                <button id="opdracht1">opdracht1</button>
+
+                <h2> OPDRACHT 2 </h2>
+                <p>Hieronder staat de text "Heyyyy!!". Verander deze text in "I did it" . maak gebruik van jqueryopdrachten.js . tips:
+                    html();
+                </p>
+
+                <p class="opdracht2text">Heyyyy!!</p>
+                <button id="opdracht2">opdracht2</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

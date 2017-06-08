@@ -1,0 +1,103 @@
+body {
+ text-align: center;
+}
+.content {
+    margin-right: 25%;
+    margin-left: 25%;  
+    width: 50%;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+.wide
+{
+    width: 100%;
+}
+
+.fancy {
+    width: 100%;
+}
+
+.error
+{
+    color: red;
+    font-size: 20px;
+}
+
+.container {
+    width:100%;
+    text-align:center;
+}
+
+.left {
+    float:left;
+    width: 33%;
+}
+
+.center {
+    display: inline-block;
+    margin:0 auto;
+    width: 33%;
+}
+
+.right {
+    float:right;
+    width: 33%;
+}
+
+.colorL
+{
+    background-color:#90EE90;
+}
+
+.colorC
+{
+    background-color:#AFEEEE;
+}
+
+.colorR
+{
+    background-color: #B0C4DE;
+}
+
+.Bestelleft
+{
+    float:left;
+    width: 40%;
+}
+.Bestelcenter {
+    display: inline-block;
+    margin:0 auto;
+    width: 30%;
+}
+
+.Bestelright {
+    float:right;
+    width: 30%;
+}
+
+/*Toms code*/
+.zoek {
+    margin-right: 25%;
+    margin-left: 25%;  
+    width: 50%;
+    padding-bottom: 1%;
+}
+
+.Time {
+     position: fixed;
+     bottom: 0;
+     right: 0;
+}
+
+.productInfo
+{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.table{
+    border-color: black;
+}
