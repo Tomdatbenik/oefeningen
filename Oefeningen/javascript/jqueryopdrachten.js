@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     $('#opdracht1').click(function () {
         //pak element op id Element="opdracht1text"
-        
+        console.log("test");
 
 
 
